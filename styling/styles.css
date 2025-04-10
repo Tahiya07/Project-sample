@@ -46,15 +46,28 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
+    transition: 0.3s ease-in-out;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-th, td {
+th{
   padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
 
 }
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: 0.3s ease-in-out;
+}
+td:hover{
+    box-shadow: 0px 0px 10px rgba(180,110,255,0.8);
+    background-color: rgba(180,110,255,0.2);
+    color: mediumvioletred;
+}
+
 
 .special-notes {
   background-color: rgba(255, 255, 255, 0.7);
@@ -83,5 +96,192 @@ th, td {
   background-size: 200% 200%;
   animation: gradientMove 5s ease infinite;
 }
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   background: linear-gradient(108.4deg, rgba(180,110,255,1) 10%, rgba(80,180,255,1) 90%);
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0;
+   background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+.logo img {
+    width: 90px; /* Adjust size */
+    height: auto;
+}
+.logo-text h2 {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+.logo-text h2:hover{
+    color:navy;
+}
+.logo-text h3 {
+    font-size: 14px;
+    color: mediumvioletred;
+    margin: 0;
+}
+.logo-text h3:hover{
+    color:navy;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
 
+.nav-links li a:hover {
+    color: mediumvioletred;
+}
+
+.apply-btn {
+    margin-left: 20px;
+    background:navy;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.apply-btn:hover {
+    background: lightskyblue;
+  color:darkblue;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 180px;
+    background: lightskyblue;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Show dropdown on click */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+.nested-dropdown {
+    position: relative;
+}
+
+/* Hide nested dropdown by default */
+.nested-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 180px;
+    background:mediumslateblue;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Show nested dropdown on hover */
+.nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+}
+
+/*Undergraduate info section*/
+.cse-benefits {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+.section-title {
+    background-color: navy;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+.benefits-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefit-card {
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(108.4deg, mediumpurple 10%, mistyrose 90%);
+    color: navy;
+
+}
+
+.benefit-number {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: mediumvioletred;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.banner {
+    text-align: center;
+    padding: 40px;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
+}
+
+.banner h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.banner h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-top: -10px;
+}

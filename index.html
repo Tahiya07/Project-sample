@@ -6,74 +6,70 @@
     <title>Tuition Fee</title>
     <link rel="stylesheet" href="styling/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap">
-
 </head>
 <body>
-    <div class="container">
-      
-        <section class="section">
-            <table>
-              <tr>
-                <th colspan="3"><span class="gradient-text">Undergraduate Cost</span></th> <!-- This will center and expand the heading -->
-            </tr>
-            
-                <tr><td>1</td><td>Credit</td><td>162</td></tr>
-                <tr><td>2</td><td>Total Semester</td><td>8</td></tr>
-                <tr><td>3</td><td>Application Fees</td><td>৳1200</td></tr>
-                <tr><td>4</td><td>Admission Fee</td><td>৳21,500</td></tr>
-                <tr><td>5</td><td>Convocation Fee</td><td>৳6,000</td></tr>
-                <tr><td>6</td><td>English Language Proficiency Course Fee</td><td>৳4,500</td></tr>
-                <tr><td>7</td><td>Per Semester Registration Fee</td><td>৳40,000</td></tr>
-                <tr><td>8</td><td>Per Semester Tuition Fee</td><td>৳45,000</td></tr>
-                <tr><td>7+8</td><td>Total Per Semester</td><td>৳85,000</td></tr>
-                <tr><td></td><td>8 Semester + Admission Fee</td><td>৳7,13,200</td></tr>
-            </table>
-          </section>
-        </section>
-        <section class="section">
-            <table>
-              <tr>
-              <th colspan="3"><span class="gradient-text">Graduate Cost</span></th> <!-- This will center and expand the heading -->
-            </tr>
-                <tr><td>1</td><td>Credit</td><td>36</td></tr>
-                <tr><td>2</td><td>Total Semester</td><td>4</td></tr>
-                <tr><td>3</td><td>Application Fee</td><td>৳1200</td></tr>
-                <tr><td>4</td><td>Admission Fee</td><td>৳21,500</td></tr>
-                <tr><td>5</td><td>Convocation Fee</td><td>৳6,000</td></tr>
-                <tr><td>6</td><td>Per Credit Fee</td><td>৳4,500</td></tr>
-                <tr><td>7</td><td>Per Semester Registration Fee</td><td>৳40,000</td></tr>
-                <tr><td></td><td>4 Semester + Admission Fee</td><td>৳1,87,000</td></tr>
-            </table>
-        </section>
+         <nav class="navbar">
+               <div class="logo">
+                 <img src="assets/UAP logo.png" alt="UAP CSE Logo">
+               </div>
+             <div class="logo-text">
+                <h2>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h2>
+                 <h3>UNIVERSITY OF ASIA PACIFIC</h3>
+            </div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+    <a href="#" class="dropbtn">Admission</a>
+    <ul class="dropdown-content">
+           <li class="nested-dropdown">
+            <a href="#" class="nested-dropbtn">Admission Info </a>
+            <ul class="nested-dropdown-content">
+                <li><a href="Undergraduate.html">Undergraduate</a></li>
+                <li><a href="Graduate.html">Graduate</a></li>
+            </ul>
+        </li>
+        <li><a href="Tuition%20Fee.html">Tuition Fees</a></li>
+        <li><a href="#">Waiver</a></li>
+        <li><a href="#">Apply Online</a></li>
+        <li><a href="#">Admission Result</a></li>
+    </ul>
+</li>
+        <li class="dropdown">
+    <a href="#" class="dropbtn" id="academicToggle">Academic </a>
+    <ul class="dropdown-content" id="academicMenu">
+        <li><a href="#">Curriculum</a></li>
+        <li><a href="#">Faculty Members</a></li>
+        <li><a href="#">Mission & Outcome</a></li>
+        <li><a href="#">Class Routine</a></li>
+        <li><a href="#">Exam Routine</a></li>
+        <li><a href="#">Academic Calendar</a></li>
+        <li><a href="#">Project and Thesis</a></li>
+    </ul>
+</li>
 
-        <section class="section">
-          <table>
-                <tr>
-                <th colspan="3"><span class="gradient-text">Special Notes</span></th>
-               </tr>
-            <tr>
-                 <td>1</td>
-                <td>Tuition Fee Payment</td>
-                <td>Can be paid in installments—50% before mid-term and 50% before final exam.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>B.Sc in CSE Admission Requirement</td>
-                <td>Students must have **Physics and Mathematics** in HSC or equivalent exam.</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Minimum Admission Requirement (O/A Level)</td>
-                <td>GPA **2.5 in O Level** (five subjects) & **A Level (two subjects)** with total **GPA 6.00**.<br> Candidates must meet department-specific admission criteria.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Application Processing Fee</td>
-                <td>Non-refundable fee of **৳1,200** (Applicable for both Undergraduate & Postgraduate programs).</td>
-            </tr>
-        </table>
-        
-        </section>
-    </div>
+          <li class="dropdown">
+    <a href="#" class="dropbtn" id="resourceToggle">Resources</a>
+    <ul class="dropdown-content" id="resourceMenu">
+        <li><a href="#">Explore Inside</a></li>
+        <li><a href="#">E-Journal</a></li>
+        </ul>
+          </li>
+        <li><a href="#">Notice Board</a></li>
+          <li class="dropdown">
+    <a href="#" class="dropbtn" id="more"> More</a>
+    <ul class="dropdown-content" id="moreMenu">
+        <li><a href="#">Club</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Event</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Research and Publications</a></li>
+        <li><a href="#">Alumni stories</a></li>
+        <li><a href="#">Alumni associations</a></li>
+    </ul>
+          </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="apply-btn">Apply Online</button>
+</nav>
 </body>
 </html>
