@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="styling/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap">
 </head>
-<body>
+<body  class="undergraduate-bg">
    <div class="banner">
-    <h1>Admission Info</h1>
-    <h2>Undergraduate</h2>
+    <h1 class="hover-text">
+    <span>A</span><span>d</span><span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span> <span>I</span><span>n</span><span>f</span><span>o</span>
+</h1>
+       <h2>Undergraduate</h2>
 </div>
 <section class="cse-benefits">
     <h2 class="section-title">Why CSE at UAP?</h2>
@@ -49,7 +51,11 @@
         "linear-gradient(108.4deg, #FFB6C1 10%, #B0E0E6 90%)" /* Light coral → pale blue */
     ];
 
-    document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
+    function changeBackground() {
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        document.body.style.background = colors[randomIndex];
+    }
+    setInterval(changeBackground, 5000);
 </script>
 
 </body>
