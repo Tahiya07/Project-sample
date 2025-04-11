@@ -1,10 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Floating Dots Table</title>
+  <style>
+    body {
+      background: #1e1e2f;
+      font-family: sans-serif;
+      color: white;
+      margin: 0;
+      padding: 50px;
+    }
+
+    .floating-dots-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 20px;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .floating-dots-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 300%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .floating-dots-bg::before, .floating-dots-bg::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+      background-size: 30px 30px;
+      animation: floatDots 40s linear infinite;
+      opacity: 0.3;
+    }
+
+    .floating-dots-bg::after {
+      animation-delay: -20s;
+      background-size: 40px 40px;
+      opacity: 0.2;
+    }
+
+    @keyframes floatDots {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-50px, -50px);
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    tr:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  </style>
 </head>
 <body>
+
+  <div class="floating-dots-wrapper">
+    <div class="floating-dots-bg"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Department</th>
+          <th>Seats</th>
+          <th>Deadline</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CSE</td>
+          <td>60</td>
+          <td>30 April</td>
+        </tr>
+        <tr>
+          <td>EEE</td>
+          <td>50</td>
+          <td>25 April</td>
+        </tr>
+        <tr>
+          <td>BBA</td>
+          <td>40</td>
+          <td>20 April</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </body>
 </html>
