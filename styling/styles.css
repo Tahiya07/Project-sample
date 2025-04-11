@@ -66,25 +66,22 @@ body {
   table {
     font-size: 0.9em;
   }
-}
-@keyframes bgAnimation {
-    0% { background: linear-gradient(108.4deg, #FFC1CC, #C3E6CB); }
-    25% { background: linear-gradient(108.4deg, #A3D5FF, #C6A5D8); }
-    50% { background: linear-gradient(108.4deg, #AFEFFF, #63C5DA); }
-    75% { background: linear-gradient(108.4deg, #FFB6C1, #B0E0E6); }
-    100% { background: linear-gradient(108.4deg, #FFC1CC, #C3E6CB); }
+}@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.undergraduate-bg{
- animation: smoothGradient 5s infinite alternate;
-    background-size: 400% 400%;
+.undergraduate-bg {
+ background: linear-gradient(120deg, #FFC1CC 20%, #C3E6CB 30%, #A3D5FF , #C6A5D8 , #AFEFFF , #63C5DA , #FFB6C1 , #B0E0E6 );
+    background-size: 200% 250%;
+    animation: gradientShift 20s infinite ease ;
 }
-
 .container {
   max-width: 800px;
-  margin: auto;
-  padding: 20px;
   border-radius: 8px;
+    padding-top: 100px; /* Creates space above */
+    margin: auto;
 }
 
 .section {
@@ -103,7 +100,7 @@ table {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  padding: 30px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   color:black;
@@ -165,9 +162,9 @@ td {
   border: 1px solid #ddd;
   transition: 0.3s ease-in-out;
 }
-td:hover{
-    box-shadow: 0px 0px 10px rgba(180,110,255,0.8);
-    background-color: rgba(180,110,255,0.2);
+tr:hover{
+    box-shadow: 0px 0px 10px cyan;
+    background-color: #c3ffec;
     color: mediumvioletred;
 }
 
@@ -360,14 +357,11 @@ td:hover{
     padding: 40px;
     color: white;
     box-shadow:
-        rgba(240, 46, 170, 0.5) 0px 5px,
-        rgba(240, 46, 170, 0.4) 0px 10px,
-        rgba(240, 46, 170, 0.3) 0px 15px,
-        rgba(240, 46, 170, 0.25) 0px 20px,
-        rgba(240, 46, 170, 0.2) 0px 25px,
-        rgba(240, 46, 170, 0.15) 0px 30px,
-        rgba(240, 46, 170, 0.1) 0px 35px,
-        rgba(240, 46, 170, 0.05) 0px 40px;
+            rgba(240, 46, 170, 0.4) 0px 5px 8px 3px,
+    rgba(240, 46, 170, 0.3) 0px 10px 12px 4px,
+    rgba(240, 46, 170, 0.25) 0px 15px 16px 5px,
+    rgba(240, 46, 170, 0.2) 0px 20px 20px 6px,
+    rgba(240, 46, 170, 0.15) 0px 25px 24px 7px;
 
 }
 .banner {
@@ -382,9 +376,6 @@ td:hover{
     transition: background 0.5s ease-in-out;
     text-align: center;
 }
-
-
-
 .banner h1 {
     font-size: 36px;
     font-weight: bolder;
